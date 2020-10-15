@@ -1,7 +1,7 @@
 Jinja2==2.9.5
 Mako==1.0.2
-MarkupSafe==0.18
-WebOb==1.2.3
+MarkupSafe
+WebOb
 WebTest==2.0.18
 beautifulsoup4==4.3.2
 flake8
@@ -21,3 +21,6 @@ wsgiref
 pytz
 tzlocal
 CherryPy==3.8.0
+python-dotenv
+oauthlib
+Beaker

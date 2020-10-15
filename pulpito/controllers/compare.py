@@ -4,7 +4,7 @@ import requests
 import urlparse
 
 from pulpito.controllers import error
-
+from pulpito.controllers import session
 base_url = conf.paddles_address
 
 
@@ -38,11 +38,13 @@ class RunCompareController(object):
             url += '&since=' + since
 
         runs = requests.get(url).json()
+        cur_session = session.beaker_session()
         full_info = dict(
             branch=branch,
             suite=suite,
             since=since,
             runs=list(),
+            session=cur_session
         )
         descriptions = set()
         for run in runs:
